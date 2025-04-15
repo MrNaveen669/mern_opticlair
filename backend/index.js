@@ -51,8 +51,18 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 // app.use(logger); // Use logger middleware
 
-app.get("/", (req, res) => {
-    res.send("Welcome Home Page");
+// commented this part, since integrating a message with react causes file type mismatch (or sorts, I'm new to this)
+
+// app.get("/", (req, res) => {
+//     res.send("Welcome Home Page");
+// });
+
+// for serving the static files  (Although path needs to be checked.)
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// added path catch for all unrouted routes
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
 });
 
 app.use("/user", userRouter);
