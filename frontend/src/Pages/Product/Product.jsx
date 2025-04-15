@@ -65,7 +65,7 @@ const Product = () => {
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/sampleproduct/all`);
+        const response = await fetch("${process.env.REACT_APP_BACKEND_URL}:5000/sampleproduct/all");
         if (!response.ok) throw new Error("Failed to fetch products.");
         
         const data = await response.json();

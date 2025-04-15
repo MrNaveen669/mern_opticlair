@@ -249,7 +249,7 @@ const ProductCard = ({ products }) => {
                         p="15px"
                         _hover={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
                     >
-                        <Link to={`/products/${product._id}`}>
+                        <Link to={`/sampleproduct/${product._id}`}>
                             <Image
                                 src={product.image || "https://via.placeholder.com/150"}
                                 alt={product.name}
@@ -271,7 +271,7 @@ const ProductCard = ({ products }) => {
                             </Flex>
                             <Text color="gray.500" fontSize="14px">{product.description}</Text>
                             <Text fontWeight="500">Category: <strong>{product.category}</strong></Text>
-                            <Text fontWeight="bold" fontSize="18px">${product.price}</Text>
+                            <Text fontWeight="bold" fontSize="18px">Rs.{product.price}</Text>
                         </Box>
                     </Box>
                 </GridItem>

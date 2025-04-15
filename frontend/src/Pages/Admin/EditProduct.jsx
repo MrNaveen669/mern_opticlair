@@ -36,7 +36,7 @@ const EditProduct = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/product/${id}`, {
+    fetch(`https://harlequin-fawn-tutu.cyclic.app/product/${id}`, {
       headers: {
         Authorization: localStorage.getItem("token")
       }
@@ -86,7 +86,7 @@ const EditProduct = () => {
       };
 
       const response = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/api/product/${id}`,
+        `https://harlequin-fawn-tutu.cyclic.app/product/${id}`,
         {
           method: "PATCH",
           headers: {

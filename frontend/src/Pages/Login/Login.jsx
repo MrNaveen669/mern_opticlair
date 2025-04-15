@@ -1,5 +1,4 @@
 
-// export default Login;
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../ContextApi/AuthContext";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
@@ -66,77 +65,13 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
     setbtn(buton);
   };
 
-  // const getData = async () => {
-  //   try {
-  //     setLoading(true);
-  //     setinCorrect(false);
-  //     if (loginData.email !== "" && loginData.password !== "") {
-  //       const res = await fetch(
-  //         `http://${process.env.REACT_APP_BACKEND_URL}:5000/user/login`,
-  //         {
-  //           method: "POST",
-  //           body: JSON.stringify(loginData),
-  //           headers: {
-  //             "Content-type": "application/json"
-  //           }
-  //         }
-  //       );
-  //       let data = await res.json();
-  //       if (res) {
-  //         const credential = await fetch(
-  //           `http://${process.env.REACT_APP_BACKEND_URL}:5000/user`
-  //         );
-  //         let cred = await credential.json();
-  //         localStorage.setItem("token", data.token);
-  //         res1 = cred.filter((el) => el.email === loginData.email);
-          
-  //         // Reset cart in Redux when new user logs in
-  //         dispatch(cartReset());
-          
-  //         // Update auth state
-  //         setisAuth(true);
-  //         setAuthData(res1);
-          
-  //         // Store user info in localStorage
-  //         localStorage.setItem("user", JSON.stringify(res1[0]));
-          
-  //         // Fetch cart items for this user after login
-  //         try {
-  //           const cartResponse = await axios.get(`http://${process.env.REACT_APP_BACKEND_URL}:5000/cart/${res1[0]._id}`);
-  //           dispatch(setCartItems(cartResponse.data));
-  //         } catch (cartError) {
-  //           console.error("Error fetching cart after login:", cartError);
-  //         }
-          
-  //         if (loginData.email.includes(process.env.admin)) {
-  //           setLoading(false);
-  //           setinCorrect(false);
-  //           onClose();
-  //           navigate("/productlist");
-  //         } else {
-  //           setLoading(false);
-  //           setinCorrect(false);
-  //           onClose();
-  //         }
-  //       } else {
-  //         setLoading(false);
-  //         setinCorrect(true);
-  //       }
-  //     }
-  //   } catch (error) {
-  //     setLoading(false);
-  //     setinCorrect(true);
-  //     console.log("An error occurred. Please try again later.");
-  //   }
-  // };
-
   const getData = async () => {
     try {
       setLoading(true);
       setinCorrect(false);
       if (loginData.email !== "" && loginData.password !== "") {
         const res = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}:5000/api/user/login`,
+          "${process.env.REACT_APP_BACKEND_URL}:5000/user/login",
           {
             method: "POST",
             body: JSON.stringify(loginData),
@@ -146,34 +81,32 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
           }
         );
         let data = await res.json();
-        if (res.ok) {
+        if (res) {
           const credential = await fetch(
-            `${process.env.REACT_APP_BACKEND_URL}:5000/api/user`
+            "${process.env.REACT_APP_BACKEND_URL}:5000/user"
           );
           let cred = await credential.json();
           localStorage.setItem("token", data.token);
-          const res1 = cred.filter((el) => el.email === loginData.email);
-  
+          res1 = cred.filter((el) => el.email === loginData.email);
+          
           // Reset cart in Redux when new user logs in
           dispatch(cartReset());
-  
+          
           // Update auth state
           setisAuth(true);
           setAuthData(res1);
-  
+          
           // Store user info in localStorage
           localStorage.setItem("user", JSON.stringify(res1[0]));
-  
+          
           // Fetch cart items for this user after login
           try {
-            const cartResponse = await axios.get(
-              `${process.env.REACT_APP_BACKEND_URL}:5000/api/cart/${res1[0]._id}`
-            );
+            const cartResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/cart/${res1[0]._id}`);
             dispatch(setCartItems(cartResponse.data));
           } catch (cartError) {
             console.error("Error fetching cart after login:", cartError);
           }
-  
+          
           if (loginData.email.includes(process.env.admin)) {
             setLoading(false);
             setinCorrect(false);
@@ -195,7 +128,6 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
       console.log("An error occurred. Please try again later.");
     }
   };
-  
 
   const handleClick = () => {
     loginData.password = "";

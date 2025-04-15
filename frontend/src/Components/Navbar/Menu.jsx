@@ -97,7 +97,7 @@ function Menus() {
               </Link>
               {NavbarDetail2.map((i, index) => (
                 <Box key={index}>
-                  <Link to="./products">
+                  <Link to="./sampleproduct">
                     <Text
                       fontSize="16px"
                       fontWeight="500"

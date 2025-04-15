@@ -18,7 +18,7 @@ function NavbarCard5() {
   const handleNavigation = (filterParams) => {
     // Construct the query string from filter parameters
     const queryString = new URLSearchParams(filterParams).toString();
-    navigate(`/products?${queryString}`);
+    navigate(`/sampleproduct?${queryString}`);
   };
 
   return (
@@ -503,7 +503,7 @@ function NavbarCard5() {
         _hover={{
           borderBottom: "4px solid teal"
         }}
-        onClick={() => navigate('/products')}
+        onClick={() => navigate('/sampleproduct')}
       >
         EXPLORE ALL
       </Box>

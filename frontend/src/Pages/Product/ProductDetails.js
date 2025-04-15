@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,13 +18,13 @@ const ProductDetails = () => {
     const dispatch = useDispatch();
     const { cart } = useSelector((state) => state.CartReducer);
     const toast = useToast();
-    const { user, isAuth } = useContext(AuthContext); // Get isAuth from context too
+    const { isAuth } = useContext(AuthContext);
     const { isOpen, onOpen, onClose } = useDisclosure(); // For login modal
 
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/api/sampleproduct/${id}`);
+                const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/sampleproduct/${id}`);
                 setProduct(res.data);
             } catch (err) {
                 console.error("Error fetching product:", err);
@@ -53,7 +52,6 @@ const ProductDetails = () => {
                 duration: 3000,
                 isClosable: true,
             });
-            // Instead of navigating to /login, open the login modal
             onOpen();
             return;
         }
@@ -61,7 +59,6 @@ const ProductDetails = () => {
         // Create a cart item object that matches your cart schema
         const cartItem = {
             userId: user._id,
-            // Remove _id field - let MongoDB generate it
             imageTsrc: product.image,
             productRefLink: product.name || `Product ${product._id}`,
             rating: product.rating || "0",
@@ -81,7 +78,7 @@ const ProductDetails = () => {
 
         try {
             // First add to the database
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}:5000/api/cart`, cartItem);
+            const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}:5000/cart', cartItem);
             
             // If successful, update Redux store
             if (response.status === 201 || response.status === 200) {
@@ -121,7 +118,7 @@ const ProductDetails = () => {
         }
     };
 
-    const handleAddToWishlist = () => {
+    const handleAddToWishlist = async () => {
         // Check if the user is logged in
         const user = JSON.parse(localStorage.getItem("user")) || {};
         if (!isAuth || !user._id) {
@@ -132,13 +129,30 @@ const ProductDetails = () => {
                 duration: 3000,
                 isClosable: true,
             });
-            // Instead of navigating to /login, open the login modal
             onOpen();
             return;
         }
 
-        dispatch(addToWishlist(product));
-        navigate("/wishlist");
+        // Call the async action creator for adding to wishlist
+        const success = await dispatch(addToWishlist(product));
+        
+        if (success) {
+            toast({
+                title: "Product added to wishlist",
+                status: "success",
+                duration: 3000,
+                isClosable: true,
+            });
+            navigate("/wishlist");
+        } else {
+            toast({
+                title: "Failed to add product to wishlist",
+                description: "Product might already be in your wishlist",
+                status: "error",
+                duration: 3000,
+                isClosable: true,
+            });
+        }
     };
 
     // Show loading state if product data isn't available yet

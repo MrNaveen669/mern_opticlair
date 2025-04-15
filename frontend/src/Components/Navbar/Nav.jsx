@@ -233,7 +233,7 @@ function Nav() {
                         </AccordionButton>
                       </h2>
                       <AccordionPanel pb={4}>
-                        <Link to="/products">
+                        <Link to="/sampleproduct">
                           <Box>
                             <Text pb="2">EYEGLASSES</Text>
                             <Text pb="2">COMPUTER GLASSES</Text>

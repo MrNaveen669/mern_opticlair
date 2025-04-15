@@ -25,7 +25,7 @@ const Cart = () => {
             try {
                 setLoading(true);
                 // Remove the trailing slash in the URL
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/api/cart/${user._id}`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/cart/${user._id}`);
                 
                 // Update the Redux store with the cart items from the database
                 dispatch(setCartItems(response.data));

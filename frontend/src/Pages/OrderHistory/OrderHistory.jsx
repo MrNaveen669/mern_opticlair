@@ -55,7 +55,7 @@ const OrderHistory = () => {
                       fontSize="16px"
                       textAlign="center"
                     >
-                      <Link to={`/products/${order.id}`}>
+                      <Link to={`/sampleproduct/${order.id}`}>
                         <Grid
                           m="auto"
                           templateColumns={{

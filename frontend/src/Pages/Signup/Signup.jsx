@@ -113,7 +113,7 @@ const Signup = () => {
   const getData = (body) => {
     setLoading(true);
 
-    fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/api/user`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/user`)
       .then((res) => res.json())
       
       .then((res) => {
@@ -128,7 +128,7 @@ const Signup = () => {
       })
       .then(() => {
         if (flag === false) {
-          fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/api/user/register`, {
+          fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/user/register`, {
             method: "POST",
             body: JSON.stringify(body),
             headers: {
