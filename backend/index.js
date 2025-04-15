@@ -62,12 +62,12 @@ app.use("/sampleproduct", sampleProductRouter);
 app.use('/wishlist', wishlistRoutes);
  // Add route
 
-app.listen(process.env.port, async () => {
+app.listen(process.env.PORT, async () => {
     try {
         await connection;
         console.log("Connected to the DB");
     } catch (err) {
         console.log("Trouble connecting to the DB", err);
     }
-    console.log(`Running at ${process.env.port} Port`);
+    console.log(`Running at ${process.env.PORT} Port`);
 });
