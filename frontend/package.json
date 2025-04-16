@@ -2,6 +2,7 @@
   "name": "lenskart_clone",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.16",
     "@chakra-ui/react": "^2.4.9",
@@ -21,7 +22,7 @@
     "nodemon": "^2.0.20",
     "payment": "^2.4.6",
     "react": "^18.2.0",
-    "react-credit-cards": "^0.8.3",
+    "react-credit-cards-2": "^1.0.3",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
@@ -43,12 +44,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  
+
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
+  
+ 
   "browserslist": {
     "production": [
       ">0.2%",

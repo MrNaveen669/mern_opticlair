@@ -71,7 +71,7 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
       setinCorrect(false);
       if (loginData.email !== "" && loginData.password !== "") {
         const res = await fetch(
-          "${process.env.REACT_APP_BACKEND_URL}:5000/user/login",
+          `${process.env.REACT_APP_BACKEND_URL}:5000/user/login`,
           {
             method: "POST",
             body: JSON.stringify(loginData),
@@ -83,7 +83,7 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
         let data = await res.json();
         if (res) {
           const credential = await fetch(
-            "${process.env.REACT_APP_BACKEND_URL}:5000/user"
+            `${process.env.REACT_APP_BACKEND_URL}:5000/user`
           );
           let cred = await credential.json();
           localStorage.setItem("token", data.token);

@@ -78,7 +78,7 @@ const ProductDetails = () => {
 
         try {
             // First add to the database
-            const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}:5000/cart', cartItem);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}:5000/cart`, cartItem);
             
             // If successful, update Redux store
             if (response.status === 201 || response.status === 200) {

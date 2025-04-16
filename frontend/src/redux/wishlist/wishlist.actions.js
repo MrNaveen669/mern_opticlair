@@ -56,7 +56,7 @@ export const addToWishlist = (product) => async (dispatch) => {
     };
     
     // First add to database
-    const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}:5000/wishlist', wishlistItem);
+    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}:5000/wishlist`, wishlistItem);
     
     // If successful, update Redux store with the database ID
     if (response.status === 201 || response.status === 200) {
