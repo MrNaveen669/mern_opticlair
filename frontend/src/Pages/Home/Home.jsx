@@ -1,3 +1,4 @@
+
 import React from "react";
 import HomeCard from "./HomeCard";
 import HomeCard1 from "./HomeCard1";
@@ -13,7 +14,7 @@ import {
   HomeDetails,
   HomeDetails1,
   HomeDetails2,
-  HomeDetails4,
+  // HomeDetails4,
   HomeDetails5,
   HomeDetails6,
   HomeDetails7,
@@ -22,7 +23,7 @@ import {
   HomeDetails10,
   HomeDetails11,
   HomeDetails12,
-  HomeDetails14,
+  // HomeDetails14,
   HomeDetails15
 } from "./HomeDetails";
 import { Image, Box } from "@chakra-ui/react";
@@ -91,11 +92,6 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <HomeCard5a type={HomeDetails4} heading="CONTACT LENSES & MORE" />
-      <br />
-      <br />
-      <br />
-      <br />
       <HomeCard5b type={HomeDetails5} heading="BUY IT YOUR WAY" />
       <br />
       <br />
@@ -133,27 +129,27 @@ const Home = () => {
       <br />
       <br />
       <HomeCard6 type={HomeDetails7} heading="SUNGLASSES" />
+      {/* <br />
       <br />
       <br />
-      <br />
-      <br />
-      <HomeCard4b
+      <br /> */}
+      {/* <HomeCard4b
         text=""
-        src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-AIR-Banner.jpg"
-      />
+        // src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-AIR-Banner.jpg"
+      /> */}
       <br />
       <br />
       <br />
       <br />
       <HomeCard6 type={HomeDetails6} heading="EYEGLASSES" />
+      {/* <br />
       <br />
       <br />
-      <br />
-      <br />
-      <HomeCard4b
+      <br /> */}
+      {/* <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-Readers-Banner.jpg"
-      />
+      /> */}
       <br />
       <br />
       <br />
@@ -184,33 +180,8 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <HomeCard4b
-        text=""
-        src="https://static1.lenskart.com/media/desktop/img/June22/Our-Brands-Banner.jpg"
-      />
-      <br />
-      <br />
-      <br />
-      <br />
-      <HomeCard6 type={HomeDetails11} heading="CONTACT LENSES" />
-      <br />
-      <br />
-      <br />
-      <br />
-      <HomeCard6 type={HomeDetails12} heading="COLOR CONTACT LENSES" />
-      <br />
-      <br />
-      <br />
-      <br />
-      <HomeCard4b
-        text=""
-        src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/whatsapp.png"
-      />
-      <br />
-      <br />
-      <br />
-      <br />
-      <HomeCard5c type={HomeDetails14} heading="MEET OUR HAPPY CUSTOMERS" />
+      
+      {/* <HomeCard5c type={HomeDetails14} heading="MEET OUR HAPPY CUSTOMERS" /> */}
       <HomeCard7 />
       <HomeCard8 type={HomeDetails15} />
       <Footer />

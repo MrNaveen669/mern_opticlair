@@ -37,16 +37,7 @@ export const HomeDetails1 = [
       "https://static1.lenskart.com/media/desktop/img/Dec22/blend-edit/web.jpg",
     caption: "Slide 1"
   },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Nov22/airplay/desk-play.jpg",
-    caption: "Slide 2"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Nov22/LK-Airflex-desktop-banner.gif",
-    caption: "Slide 3"
-  },
+  
   {
     img:
       "https://static1.lenskart.com/media/desktop/img/Nov22/tinted/launch-desk.gif",
@@ -84,11 +75,7 @@ export const HomeDetails1 = [
     img: "https://static1.lenskart.com/media/desktop/img/Jan23/desktoop.gif",
     caption: "Slide 1"
   },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Dec22/new-collection/desktop.gif",
-    caption: "Slide 2"
-  }
+  
 ];
 
 export const HomeDetails2 = [
@@ -154,18 +141,18 @@ export const HomeDetails2 = [
   }
 ];
 
-export const HomeDetails4 = [
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/June22/contact-lens-more.jpg",
-    caption: "Slide 4"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/June22/contact-lens-more-1.jpg",
-    caption: "Slide 4"
-  }
-];
+// export const HomeDetails4 = [
+//   {
+//     img:
+//       "https://static1.lenskart.com/media/desktop/img/June22/contact-lens-more.jpg",
+//     caption: "Slide 4"
+//   },
+//   // {
+//   //   img:
+//   //     "https://static1.lenskart.com/media/desktop/img/June22/contact-lens-more-1.jpg",
+//   //   caption: "Slide 4"
+//   // }
+// ];
 
 export const HomeDetails5 = [
   {
@@ -173,10 +160,7 @@ export const HomeDetails5 = [
       "https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/call1800.jpg",
     caption: "Slide 4"
   },
-  {
-    img: "https://static1.lenskart.com/media/desktop/img/Nov21/whatsapp.jpg",
-    caption: "Slide 4"
-  },
+ 
   {
     img: "https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/hto.jpg",
     caption: "Slide 4"
@@ -326,11 +310,7 @@ export const HomeDetails10 = [
       "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/matte-black-half-rim-rectangle-lenskart-readers-lr-e13699-c1-b-reading-eyeglasses-(only-for--1.50-power)_g_826205_03_2022.jpg",
     caption: "Slide 4"
   },
-  {
-    img:
-      "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/black-rectangle-lenskart-readers-lr-e11058-c3d-reading-eyeglass-(only-for--2.50-power)_g_409905_03_2022.jpg",
-    caption: "Slide 4"
-  },
+  
   {
     img:
       "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/black-full-rim-rectangle-lenskart-readers-lr-e11058-c4-a-reading-eyeglasses-(only-for--1.25-power)_g_1943_6_16_22.jpg",
@@ -341,11 +321,7 @@ export const HomeDetails10 = [
       "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/matte-black-half-rim-rectangle-lenskart-readers-lr-e13699-c1-b-reading-eyeglasses-(only-for--1.50-power)_g_826205_03_2022.jpg",
     caption: "Slide 4"
   },
-  {
-    img:
-      "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/black-rectangle-lenskart-readers-lr-e11058-c3d-reading-eyeglass-(only-for--2.50-power)_g_409905_03_2022.jpg",
-    caption: "Slide 4"
-  },
+  
   {
     img:
       "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/black-full-rim-rectangle-lenskart-readers-lr-e11058-c4-a-reading-eyeglasses-(only-for--1.25-power)_g_1943_6_16_22.jpg",
@@ -419,20 +395,20 @@ export const HomeDetails12 = [
   }
 ];
 
-export const HomeDetails14 = [
-  {
-    img: "https://youtu.be/HYPqf_eVvvM?t=11",
-    caption: "Slide 4"
-  },
-  {
-    img: "https://youtu.be/SQm3RxXRunw",
-    caption: "Slide 4"
-  },
-  {
-    img: "https://youtu.be/IZpUQ-S_LcM",
-    caption: "Slide 4"
-  }
-];
+// export const HomeDetails14 = [
+//   {
+//     img: "https://youtu.be/HYPqf_eVvvM?t=11",
+//     caption: "Slide 4"
+//   },
+//   {
+//     img: "https://youtu.be/SQm3RxXRunw",
+//     caption: "Slide 4"
+//   },
+//   {
+//     img: "https://youtu.be/IZpUQ-S_LcM",
+//     caption: "Slide 4"
+//   }
+// ];
 
 export const HomeDetails15 = [
   {
@@ -444,8 +420,8 @@ export const HomeDetails15 = [
   },
   {
     head: "EYEGLASSES",
-    info: `Lenskart has a wide range of styles that are highly fashionable. You can try out the full-rimmed and half-rimmed eyeglasses that come with various frame and temple materials such as acetate, stainless steel, TR-90, and metal, among others. Rimless spectacles also come in various styles with sporty and elegant temples.
-    Various Brands Such As Ray-Ban, Oakley, Carrera, John Jacobs, Lee Cooper, And Oakley Have An Amazing Variety Of Frame And Temple Styles. The Browline, Round, Rectangular, Square And Wayfarer-Shaped Spectacles Are Some Of The Best Styles Of Men’s Eyeglasses And They Come With Sophisticated As Well As Sporty Frame And Temple Colours. Spectacles With Tortoise Shell Frames Have A Vintage Appeal And You Can Easily Choose From The Various Styles Available At Lenskart.
+    info: `Opticlair has a wide range of styles that are highly fashionable. You can try out the full-rimmed and half-rimmed eyeglasses that come with various frame and temple materials such as acetate, stainless steel, TR-90, and metal, among others. Rimless spectacles also come in various styles with sporty and elegant temples.
+    Various Brands Such As Ray-Ban, Oakley, Carrera, John Jacobs, Lee Cooper, And Oakley Have An Amazing Variety Of Frame And Temple Styles. The Browline, Round, Rectangular, Square And Wayfarer-Shaped Spectacles Are Some Of The Best Styles Of Men’s Eyeglasses And They Come With Sophisticated As Well As Sporty Frame And Temple Colours. Spectacles With Tortoise Shell Frames Have A Vintage Appeal And You Can Easily Choose From The Various Styles Available At Opticlair.
     
     Top Brand Eyeglasses- Ray-Ban Eyeglasses, Carrera Eyeglasses, Oakley, Men Eyeglasses, Women Eyeglasses, John Jacob Eyeglasses
     
@@ -453,10 +429,10 @@ export const HomeDetails15 = [
   },
   {
     head: "CONTACT LENSES",
-    info: `Lenskart has various types of contact lenses. Brands such as Aqualens, Bausch & Lomb, Johnson & Johnson, Acuvue, Alcon, and Purevision, among others have yearly, monthly, 2-weekly, and daily disposable contact lenses. Specially designed toric contact lenses are also available from these brands.
+    info: `Opticlair has various types of contact lenses. Brands such as Aqualens, Bausch & Lomb, Johnson & Johnson, Acuvue, Alcon, and Purevision, among others have yearly, monthly, 2-weekly, and daily disposable contact lenses. Specially designed toric contact lenses are also available from these brands.
     Coloured Contact Lenses Are Available With And Without Power, And Some Of Them Have UV Protection As Well. The Unique Colours That You Could Try Are Amethyst, Hazel, Green, Turquoise, Blue, Brown, And Grey, Which Look Quite Stylish. Made From The Best Materials That Allow Ample Oxygen Supply To The Eyes, These Contact Lenses Sit Perfectly On The Eyes And Can Be Worn Anywhere.
     
-    Lenskart Also Offers A Wide Range Of Contact Lens Accessories. To Clean Your Contacts, You Can Get The Best Contact Lens Solutions From Our Online Store, Which Are Easy To Use And Effective In Keeping Your Eyes Healthy.
+    Opticlair Also Offers A Wide Range Of Contact Lens Accessories. To Clean Your Contacts, You Can Get The Best Contact Lens Solutions From Our Online Store, Which Are Easy To Use And Effective In Keeping Your Eyes Healthy.
     
     Popular Contact Lenses Brands- Bausch & Lomb Contact Lenses, Ciba Vision Contact Lenses, Johnson & Johnson Contact Lenses
     

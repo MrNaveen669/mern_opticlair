@@ -1,8 +1,9 @@
+
 import React from "react";
 import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Signup/Signup";
 import NavbarCard5 from "./NavbarCard5";
-import { NavbarDetail1 } from "./NavbarDetail";
+// import { NavbarDetail1 } from "./NavbarDetail";
 import { Link, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../ContextApi/AuthContext";
@@ -27,22 +28,22 @@ import {
   PopoverBody
 } from "@chakra-ui/react";
 
-export const NavbarCard1 = () => {
-  return (
-    <Box cursor="pointer">
-      <Flex gap={2} pl={5} pt={2}>
-        {NavbarDetail1.map((i, index) => (
-          <Box key={index}>
-            <Text fontSize="12px" _hover={{ textDecoration: "underline" }}>
-              {i.labels}
-            </Text>
-            <Spacer />
-          </Box>
-        ))}
-      </Flex>
-    </Box>
-  );
-};
+// export const NavbarCard1 = () => {
+//   return (
+//     <Box cursor="pointer">
+//       <Flex gap={2} pl={5} pt={2}>
+//         {NavbarDetail1.map((i, index) => (
+//           <Box key={index}>
+//             <Text fontSize="12px" _hover={{ textDecoration: "underline" }}>
+//               {i.labels}
+//             </Text>
+//             <Spacer />
+//           </Box>
+//         ))}
+//       </Flex>
+//     </Box>
+//   );
+// };
 
 export const NavbarCard2 = () => {
   const { isAuth, setisAuth, Authdata } = useContext(AuthContext);
@@ -60,7 +61,7 @@ export const NavbarCard2 = () => {
           <Box w="15%">
             <HStack fontSize="18px" fontWeight="bold">
               <FiPhoneCall />
-              <Text>1800-111-111</Text>
+              <Text>8817415179</Text>
             </HStack>
           </Box>
           <Box w="55%">

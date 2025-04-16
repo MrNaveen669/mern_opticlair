@@ -39,20 +39,20 @@ export const FooterCard2 = () => {
             "2xl": "repeat(2,1fr)"
           }}
         >
-          <Image
+          {/* <Image
             src="https://static.lenskart.com/media/desktop/img/play-store.svg"
             alt="img"
           />
           <Image
             src="https://static.lenskart.com/media/desktop/img/app-store.svg"
             alt="img"
-          />
+          /> */}
         </Grid>
       </Center>
       <br />
       <Center w="60%" m="auto" fontSize="14px">
         <Text>
-          Download Lenskart App to buy Eyeglasses, Sunglasses and Contact Lenses
+          Visit Opticlair.in to buy Eyeglasses, Sunglasses and Contact Lenses
         </Text>
       </Center>
     </Box>

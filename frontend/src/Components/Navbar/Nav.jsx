@@ -359,30 +359,8 @@ function Nav() {
                       Gold Membership
                     </Box>
                   </Link>
-                  <Link>
-                    <Box
-                      borderBottom="0.1px solid gray"
-                      p="5% 0%"
-                      color="black"
-                      _hover={{ fontWeight: "bold" }}
-                      fontSize="15px"
-                    >
-                      Try Frames in 3D
-                    </Box>
-                  </Link>
-                  <Link>
-                    <Box
-                      borderBottom="1px solid white"
-                      p="5% 0%"
-                      color="black"
-                      _hover={{ fontWeight: "bold" }}
-                      fontSize="15px"
-                    >
-                      Dowloads Apps
-                    </Box>
-                  </Link>
                 </Box>
-                <Heading mt="15%" color="black" fontSize="15px" mb="5%">
+                {/* <Heading mt="15%" color="black" fontSize="15px" mb="5%">
                   FAQ's & POLICIES
                 </Heading>
                 <Box display="flex" flexDirection="column" fontSize="16px">
@@ -418,7 +396,7 @@ function Nav() {
                       Cobrowsing
                     </Box>
                   </Link>
-                </Box>
+                </Box> */}
 
                 <Accordion allowMultiple></Accordion>
               </DrawerBody>
