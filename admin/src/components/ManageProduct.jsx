@@ -49,7 +49,7 @@ function ManageProduct() {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/api/sampleproduct/all`);
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sampleproduct/all`);
             const data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -66,7 +66,7 @@ function ManageProduct() {
                 features: newProduct.features.split(",").map((feature) => feature.trim())
             };
 
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/api/sampleproduct/add`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sampleproduct/add`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData)
@@ -99,7 +99,7 @@ function ManageProduct() {
                     : (editingProduct.features || "").split(",").map(feature => feature.trim())
             };
 
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/api/sampleproduct/update/${editingProduct._id}`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sampleproduct/update/${editingProduct._id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedProduct)
@@ -118,7 +118,7 @@ function ManageProduct() {
 
     const deleteProduct = async (id) => {
         try {
-            await fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/api/sampleproduct/delete/${id}`, { method: "DELETE" });
+            await fetch(`${process.env.REACT_APP_BACKEND_URL}/sampleproduct/delete/${id}`, { method: "DELETE" });
             fetchProducts();
         } catch (error) {
             console.error("Error deleting product:", error);
