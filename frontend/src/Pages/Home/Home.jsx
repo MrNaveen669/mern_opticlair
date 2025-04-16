@@ -22,7 +22,7 @@ import {
   HomeDetails10,
   HomeDetails11,
   HomeDetails12,
-  HomeDetails14,
+  // HomeDetails14,
   HomeDetails15
 } from "./HomeDetails";
 import { Image, Box } from "@chakra-ui/react";
@@ -210,7 +210,7 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <HomeCard5c type={HomeDetails14} heading="MEET OUR HAPPY CUSTOMERS" />
+      {/* <HomeCard5c type={HomeDetails14} heading="MEET OUR HAPPY CUSTOMERS" /> */}
       <HomeCard7 />
       <HomeCard8 type={HomeDetails15} />
       <Footer />

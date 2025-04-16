@@ -52,7 +52,7 @@ export const FooterCard2 = () => {
       <br />
       <Center w="60%" m="auto" fontSize="14px">
         <Text>
-          Download Lenskart App to buy Eyeglasses, Sunglasses and Contact Lenses
+          Visit opticlair.in  to buy Eyeglasses, Sunglasses and Contact Lenses
         </Text>
       </Center>
     </Box>
