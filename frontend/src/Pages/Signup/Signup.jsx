@@ -20,6 +20,7 @@ import {
   InputRightElement,
   Text
 } from "@chakra-ui/react";
+import { USERS_URL, REGISTER_URL } from "../../config/api";
 
 const Signup = () => {
   const init = {
@@ -113,7 +114,7 @@ const Signup = () => {
   const getData = (body) => {
     setLoading(true);
 
-    fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/user`)
+    fetch(USERS_URL)
       .then((res) => res.json())
       
       .then((res) => {
@@ -128,7 +129,7 @@ const Signup = () => {
       })
       .then(() => {
         if (flag === false) {
-          fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/user/register`, {
+          fetch(REGISTER_URL, {
             method: "POST",
             body: JSON.stringify(body),
             headers: {

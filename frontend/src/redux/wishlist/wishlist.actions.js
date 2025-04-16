@@ -56,7 +56,7 @@ export const addToWishlist = (product) => async (dispatch) => {
     };
     
     // First add to database
-    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}:5000/wishlist`, wishlistItem);
+    const response = await axios.post('http://localhost:5000/wishlist', wishlistItem);
     
     // If successful, update Redux store with the database ID
     if (response.status === 201 || response.status === 200) {
@@ -80,7 +80,7 @@ export const addToWishlist = (product) => async (dispatch) => {
 export const removeFromWishlist = (itemId) => async (dispatch) => {
   try {
     // First remove from database
-    await axios.delete(`${process.env.REACT_APP_BACKEND_URL}:5000/wishlist/${itemId}`);
+    await axios.delete(`http://localhost:5000/wishlist/${itemId}`);
     
     // Then update Redux store
     dispatch({
@@ -109,7 +109,7 @@ export const loadWishlistItems = () => async (dispatch) => {
     }
     
     // Get wishlist items for current user
-    const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/wishlist/user/${user._id}`);
+    const response = await axios.get(`http://localhost:5000/wishlist/user/${user._id}`);
     
     if (response.status === 200) {
       dispatch({

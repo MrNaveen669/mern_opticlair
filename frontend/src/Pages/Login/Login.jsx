@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { setCartItems } from "../../redux/CartPage/action";
 import { useDispatch } from "react-redux";
 import { cartReset } from "../../redux/CartPage/action";
+import { USERS_URL, LOGIN_URL, CART_URL } from "../../config/api";
+
 import axios from "axios";
 import {
   Checkbox,
@@ -70,8 +72,8 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
       setLoading(true);
       setinCorrect(false);
       if (loginData.email !== "" && loginData.password !== "") {
-        const res = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}:5000/user/login`,
+       
+          const res = await fetch(LOGIN_URL,
           {
             method: "POST",
             body: JSON.stringify(loginData),
@@ -82,9 +84,8 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
         );
         let data = await res.json();
         if (res) {
-          const credential = await fetch(
-            `${process.env.REACT_APP_BACKEND_URL}:5000/user`
-          );
+          const credential = await fetch(USERS_URL);
+
           let cred = await credential.json();
           localStorage.setItem("token", data.token);
           res1 = cred.filter((el) => el.email === loginData.email);
@@ -101,7 +102,7 @@ const Login = ({ isOpen: externalIsOpen, onOpen: externalOnOpen, onClose: extern
           
           // Fetch cart items for this user after login
           try {
-            const cartResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000/cart/${res1[0]._id}`);
+            const cartResponse = await axios.get(`${CART_URL}/${res1[0]._id}`);
             dispatch(setCartItems(cartResponse.data));
           } catch (cartError) {
             console.error("Error fetching cart after login:", cartError);

@@ -20,6 +20,7 @@ import {
   Badge
 } from "@chakra-ui/react";
 import ProductCard from "./ProductCard";
+import { PRODUCT_ALL_URL } from "../../config/api"; 
 
 const Product = () => {
   const location = useLocation();
@@ -65,7 +66,8 @@ const Product = () => {
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}:5000/sampleproduct/all`);
+      
+const response = await fetch(PRODUCT_ALL_URL);
         if (!response.ok) throw new Error("Failed to fetch products.");
         
         const data = await response.json();

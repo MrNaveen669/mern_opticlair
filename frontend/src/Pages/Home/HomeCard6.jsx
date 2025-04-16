@@ -9,7 +9,7 @@ import "swiper/css/autoplay";
 const HomeCard6 = ({ type, heading }) => {
   return (
     <Box
-      justifyContent="left" 
+      justifyContent="left"
       w="85%"
       m="auto"
       mt="6"

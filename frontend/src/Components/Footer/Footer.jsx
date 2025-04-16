@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Center } from "@chakra-ui/react";
 import { FooterCard1, FooterCard2, FooterCard } from "./FooterCard";
-import { services, about, Location, Contact } from "./FooterDetails";
+import { services, about, helps } from "./FooterDetails";
 
 const Footer = () => {
   return (
@@ -33,8 +33,7 @@ const Footer = () => {
           >
             <FooterCard1 type={services} heading="Services" />
             <FooterCard1 type={about} heading="About Us" />
-            <FooterCard1 type={Location} heading="Location" />
-            <FooterCard1 type={Contact} heading="Contact Us" />
+            <FooterCard1 type={helps} heading="Help" />
           </Grid>
         </Box>
         <Center>

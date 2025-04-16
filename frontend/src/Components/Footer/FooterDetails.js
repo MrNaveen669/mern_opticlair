@@ -24,18 +24,12 @@ export const about = [
     labels: "About Us",
   },
   {
-    labels: "Opticlair Coupons",
+    labels: "Lenskart Coupons",
   },
 ];
 
-export const Location = [
+export const helps = [
   {
-    labels: "In Front of New Vivekanand Park Budha Para, Raipur(C.G.)",
-  },
-];
-
-export const Contact = [
-  {
-    labels: "8817415179",
+    labels: "FAQ's",
   },
 ];

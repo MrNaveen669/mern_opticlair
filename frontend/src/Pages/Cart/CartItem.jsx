@@ -217,7 +217,7 @@ const CartItem = () => {
       console.log("Attempting to delete item with _id:", itemId);
       
       // Delete from database first
-      const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}:5000/cart/${itemId}`);
+      const response = await axios.delete(`http://localhost:5000/cart/${itemId}`);
       
       // Check if deletion was successful
       if (response.data.status === 200 || response.status === 200) {
@@ -255,7 +255,7 @@ const CartItem = () => {
     } else {
         try {
             // First update in the database
-            await axios.patch(`${process.env.REACT_APP_BACKEND_URL}:5000/cart/${id}`, {
+            await axios.patch(`http://localhost:5000/cart/${id}`, {
                 quantity: qty - 1
             });
             
@@ -279,7 +279,7 @@ const CartItem = () => {
 const handleIncrementChange = async (id, qty) => {
     try {
         // First update in the database
-        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}:5000/cart/${id}`, {
+        await axios.patch(`http://localhost:5000/cart/${id}`, {
             quantity: qty + 1
         });
         
