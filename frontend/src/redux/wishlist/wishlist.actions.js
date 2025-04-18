@@ -1,30 +1,11 @@
-// import { ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST, RESET } from "./wishlist.types";
 
-// export const addToWishlist = (product) => {
-//   return {
-//     type: ADD_TO_WISHLIST,
-//     payload: product
-//   };
-// };
-
-// export const removeFromWishlist = (item) => {
-//   return {
-//     type: REMOVE_FROM_WISHLIST,
-//     payload: item
-//   };
-// };
-
-// export const WishlistReset = (id) => {
-//   return {
-//     type: RESET
-//   };
-// };
 import axios from "axios";
 import { 
   ADD_TO_WISHLIST, 
   REMOVE_FROM_WISHLIST,
   SET_WISHLIST_ITEMS 
 } from "./wishlist.types";
+import { WISHLIST_URL} from "../../config/api";
 
 // Action creator to add item to wishlist
 export const addToWishlist = (product) => async (dispatch) => {
@@ -56,7 +37,7 @@ export const addToWishlist = (product) => async (dispatch) => {
     };
     
     // First add to database
-    const response = await axios.post('http://localhost:5000/wishlist', wishlistItem);
+    const response = await axios.post(`${WISHLIST_URL}`, wishlistItem);
     
     // If successful, update Redux store with the database ID
     if (response.status === 201 || response.status === 200) {
@@ -80,7 +61,7 @@ export const addToWishlist = (product) => async (dispatch) => {
 export const removeFromWishlist = (itemId) => async (dispatch) => {
   try {
     // First remove from database
-    await axios.delete(`http://localhost:5000/wishlist/${itemId}`);
+    await axios.delete(`${WISHLIST_URL}/${itemId}`);
     
     // Then update Redux store
     dispatch({
@@ -109,7 +90,7 @@ export const loadWishlistItems = () => async (dispatch) => {
     }
     
     // Get wishlist items for current user
-    const response = await axios.get(`http://localhost:5000/wishlist/user/${user._id}`);
+    const response = await axios.get(`${WISHLIST_URL}/user/${user._id}`);
     
     if (response.status === 200) {
       dispatch({

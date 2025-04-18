@@ -9,6 +9,7 @@ import ProdCard from "./ProdCard";
 import { ProdImage } from "./ProdImage";
 import axios from "axios";
 import { Grid, GridItem, Image } from "@chakra-ui/react";
+import {  PRODUCT_URL } from "../../config/api";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const SingleProduct = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.CartReducer);
+ 
 
   const handleAddToCart = () => {
     const existingItem = cart.findIndex((item) => item._id === data._id);
@@ -38,7 +40,7 @@ const SingleProduct = () => {
   };
 
   const fetchSingleProduct = () => {
-    axios(`http://localhost:5000/product/${id}`)
+    axios(`${PRODUCT_URL}/${id}`)
       .then((res) => setData(res.data.product))
       .catch((err) => console.log(err));
   };
