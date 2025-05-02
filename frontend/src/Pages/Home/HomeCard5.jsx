@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Text, Image, Grid } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
+import offer1 from "../../assets/offer1.png"
 
 export const HomeCard5 = () => {
   return (
@@ -19,7 +20,7 @@ export const HomeCard5 = () => {
       >
         <Box>
           <Image
-            src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/eye-square10.jpg"
+            src={offer1}
             alt="img"
             p="2"
           />

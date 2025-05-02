@@ -14,6 +14,11 @@ import OrderHistory from "../Pages/OrderHistory/OrderHistory";
 import Wishlist from "../Pages/Wishlist/Wishlist";
 import Productlist from "../Pages/Admin/Productlist";
 import ProductPost from "../Pages/Admin/ProductPost";
+import TermsAndConditions from "../Pages/StaticPages/TermsAndConditions";
+import CancellationsAndRefunds from "../Pages/StaticPages/CancellationsAndRefunds";
+import PrivacyPolicy from "../Pages/StaticPages/PrivacyPolicy";
+import ContactUs from "../Pages/StaticPages/ContactUs";
+
 
 import EditProduct from "../Pages/Admin/EditProduct";
 
@@ -29,7 +34,7 @@ const AllRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/sampleproduct" element={<Product />} />
       <Route path="/sampleproduct/:id" element={<ProductDetails />} />
-    
+
 
       {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
       <Route
@@ -112,6 +117,11 @@ const AllRoutes = () => {
           </Privateroutes>
         }
       />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      <Route path="/cancellations-and-refunds" element={<CancellationsAndRefunds />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/contact-us" element={<ContactUs />} />
+
     </Routes>
   );
 };

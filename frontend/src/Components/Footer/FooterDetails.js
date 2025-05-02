@@ -33,7 +33,7 @@ export const Location = [
     labels: "In Front of New Vivekanand Park Budha Para, Raipur (C.G.)",
   },
   {
-    labels: "Contact US : 8817415179",
+    labels: "Contact US : 9981463336",
   },
   {
     labels: "Gmail : exaple@gmail.com",

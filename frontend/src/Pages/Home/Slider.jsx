@@ -73,9 +73,20 @@ const Slider = ({ type }) => {
                   {i.name}
                 </Text>
               </Center>
-              <Button p="20px 40px" colorScheme="teal" m="auto" fontSize="17px">
+              {/* <Button p="20px 40px" colorScheme="teal" m="auto" fontSize="17px">
+                Explore
+              </Button> */}
+              <Button
+                p="20px 40px"
+                bg="#000202"
+                color="white"
+                _hover={{ bg: "#000202" }}
+                m="auto"
+                fontSize="17px"
+              >
                 Explore
               </Button>
+
             </VStack>
           </SwiperSlide>
         </Box>
@@ -83,5 +94,7 @@ const Slider = ({ type }) => {
     </Swiper>
   );
 };
+
+
 
 export default Slider;

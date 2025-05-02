@@ -61,7 +61,7 @@ export const NavbarCard2 = () => {
           <Box w="15%">
             <HStack fontSize="18px" fontWeight="bold">
               <FiPhoneCall />
-              <Text>8817415179</Text>
+              <Text>9981463336</Text>
             </HStack>
           </Box>
           <Box w="55%">

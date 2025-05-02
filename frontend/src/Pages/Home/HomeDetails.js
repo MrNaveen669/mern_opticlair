@@ -1,3 +1,4 @@
+
 export const HomeDetails = [
   {
     img: "https://static1.lenskart.com/media/desktop/img/Apr22/a2.png",
@@ -32,51 +33,17 @@ export const HomeDetails = [
 ];
 
 export const HomeDetails1 = [
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Dec22/blend-edit/web.jpg",
-    caption: "Slide 1"
-  },
-  
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Nov22/tinted/launch-desk.gif",
-    caption: "Slide 4"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Oct22/kiara/Refresh-Banner-Web.gif",
-    caption: "Slide 5"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Nov22/mens-edit/desktop.jpg",
-    caption: "Slide 1"
-  },
-  {
-    img: "https://static1.lenskart.com/media/desktop/img/Oct22/at/web.jpg",
-    caption: "Slide 2"
-  },
-  {
-    img: "https://static1.lenskart.com/media/desktop/img/Nov22/trans1.gif",
-    caption: "Slide 3"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Jan23/23jan/hooper/hooper-web.jpg",
-    caption: "Slide 4"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Dec22/1-Dec/Homepage-Banner-web.gif",
-    caption: "Slide 5"
-  },
-  {
-    img: "https://static1.lenskart.com/media/desktop/img/Jan23/desktoop.gif",
-    caption: "Slide 1"
-  },
-  
+  { img: '/assets/nav1.png', caption: "Slide 1" },
+  { img: '/assets/nav4.png', caption: "Slide 4" },
+  { img: '/assets/nav5.png', caption: "Slide 5" },
+  { img: '/assets/nav7.png', caption: "Slide 6" },
+  { img: '/assets/nav8.png', caption: "Slide 2" },
+  { img: '/assets/nav3.png', caption: "Slide 3" },
+  { img: '/assets/nav2.png', caption: "Slide 7" },
+  { img: '/assets/nav9.png', caption: "Slide 8" },
+  { img: '/assets/offer.png', caption: "Slide 9" }
 ];
+
 
 export const HomeDetails2 = [
   {
@@ -155,21 +122,11 @@ export const HomeDetails2 = [
 // ];
 
 export const HomeDetails5 = [
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/call1800.jpg",
-    caption: "Slide 4"
-  },
- 
-  {
-    img: "https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/hto.jpg",
-    caption: "Slide 4"
-  },
-  {
-    img:
-      "https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/stores.jpg",
-    caption: "Slide 4"
-  }
+  
+  { img: '/assets/STORE.png', caption: "Slide 4" },
+  { img: '/assets/contactus.png', caption: "Slide 4" },
+  
+  
 ];
 
 export const HomeDetails6 = [
@@ -416,7 +373,8 @@ export const HomeDetails15 = [
     info: `Sunglasses help protect the eyes from the damaging UV rays of the sun and, today, they have become an essential fashion accessory too. The classic styles of shades never go out of fashion as they are reiterated with each passing trend to suit one’s contemporary style sensibility. With different combinations of frame and lens colours, sunglasses appeal to all ages irrespective of gender. Luxury eyewear brands such as Linda Farrow and Tom Ford, among others have an excellent collection of aviator-shaped and cat-eye goggles that go an extra mile to create style and provide luxury. Vogue, Tommy Hilfiger, French Connection, Ray-Ban, John Jacobs and Vincent Chase, on the other hand, have plenty of sunglasses for women as well in various elegant colours and chic styles.
     Ray-Ban Goggles Are Popular For Their Timeless Frame Designs Such As The Aviator-Shaped, Wayfarer-Shaped And Browline Styles. These Shades Are Available In Plenty Of Colours On The Frames And Lenses That Would Go With Any Modern Outfit Effortlessly. Brands Such As Carrera And Calvin Klein, Among Several Others Have Excellent Variations Of The Classic Aviator-Shaped And Wayfarer-Shaped Goggles With Sporty And Suave Lens Colours. Sunglasses For Men Are Available From The Best Brands Such As Hugo Boss, Oakley And John Jacobs, Among Others, And Are Ideal For Various Occasions.
     
-    Popular Sunglasses Brands- Ray Ban Sunglasses, Oakley Sunglasses, Carrera Sunglasses, IDEE Sunglasses`
+    Popular Sunglasses Brands- Ray Ban Sunglasses, Oakley Sunglasses, Carrera Sunglasses, IDEE Sunglasses`,
+    color: "#010002",
   },
   {
     head: "EYEGLASSES",
@@ -425,7 +383,8 @@ export const HomeDetails15 = [
     
     Top Brand Eyeglasses- Ray-Ban Eyeglasses, Carrera Eyeglasses, Oakley, Men Eyeglasses, Women Eyeglasses, John Jacob Eyeglasses
     
-    Best Styles In Eyeglasses- Full Rim Eyeglasses, Half Rim Eyeglasses, Rimless Eyeglasses, Cat Eye Eyeglasses, Aviator Shapes Eyeglasses, Wayfarer Shapes Eyeglasses`
+    Best Styles In Eyeglasses- Full Rim Eyeglasses, Half Rim Eyeglasses, Rimless Eyeglasses, Cat Eye Eyeglasses, Aviator Shapes Eyeglasses, Wayfarer Shapes Eyeglasses`,
+    color: "#010002",
   },
   {
     head: "CONTACT LENSES",
@@ -438,6 +397,7 @@ export const HomeDetails15 = [
     
     Contact Lenses By Type- Monthly Disposable, Daily Disposable, Toric Contact Lenses
     
-    Lenses Directory`
+    Lenses Directory`,
+    color: "#010002",
   }
 ];

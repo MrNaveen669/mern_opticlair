@@ -10,6 +10,8 @@ import HomeCard7 from "./HomeCard7";
 import HomeCard8 from "./HomeCard8";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
+
+
 import {
   HomeDetails,
   HomeDetails1,
@@ -27,6 +29,11 @@ import {
   HomeDetails15
 } from "./HomeDetails";
 import { Image, Box } from "@chakra-ui/react";
+import seeclear from "../../assets/seeclear.png";
+import get1 from "../../assets/get1.gif";
+import offer2 from "../../assets/offer2.gif"
+import Luxury from "../../assets/Luxury.png"
+import kidwear from "../../assets/kidwear.png"
 const Home = () => {
   return (
     <Box>
@@ -34,7 +41,7 @@ const Home = () => {
       <HomeCard type={HomeDetails} />
       <HomeCard1 type={HomeDetails1} />
       <Image
-        src="https://static1.lenskart.com/media/desktop/img/Apr22/Bannerforexport.jpg"
+        src={seeclear}
         alt="img"
         mt="10"
       />
@@ -44,16 +51,16 @@ const Home = () => {
       <br />
       <br />
       <HomeCard4
-        text="As Seen on Shark Tank"
-        src="https://static1.lenskart.com/media/desktop/img/Dec22/1-Dec/Homepage-Banner-web.gif"
+        text="BUY 1 GET 1 FREE"
+        src={get1}
       />
       <br />
       <br />
       <br />
       <br />
       <HomeCard4
-        text="Trending Sunglasses"
-        src="https://static1.lenskart.com/media/desktop/img/Jan23/sunglasses/Sun-Banner-web.gif"
+        text="As Seen On"
+        src={Luxury}
       />
       <br />
       <br />
@@ -61,20 +68,14 @@ const Home = () => {
       <br />
       <br />
       <br />
+
       <HomeCard4
-        text="As Seen On Kiara"
-        src="https://static1.lenskart.com/media/desktop/img/Nov22/23-Nov/Hompage-banner4.jpg"
+        text="Trending Eyewear"
+        src={offer2}
       />
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <HomeCard4
-        text="Aquacolor - Glam Up With Color Lenses"
-        src="https://static1.lenskart.com/media/desktop/img/Oct22/kiara/Refresh-Banner-Web.gif"
-      />
       <br />
       <br />
       <br />
@@ -83,10 +84,9 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <br />
       <HomeCard4a
-        text="INTRODUCING OJOS Wear - SUBSCRIBE & SAVE"
-        src="https://static1.lenskart.com/media/desktop/img/May22/ojos-web.jpg"
+        text="Kids Eyewear"
+        src={kidwear}
       />
       <br />
       <br />

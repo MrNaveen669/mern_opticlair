@@ -7,7 +7,7 @@ import { services, about, Location, Contact } from "./FooterDetails";
 const Footer = () => {
   return (
     <Box
-      bgColor="#000042"
+      bgColor="#010002"
       color="whiteAlpha.900"
       p={{ lg: "0", md: "5", base: "5" }}
     >

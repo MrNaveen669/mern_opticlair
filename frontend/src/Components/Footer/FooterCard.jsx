@@ -1,8 +1,6 @@
 import React from "react";
 import { Box, Text, Image, Flex, Center, Grid } from "@chakra-ui/react";
-import { AiFillFacebook } from "react-icons/ai";
-import { TfiTwitter } from "react-icons/tfi";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { AiFillFacebook, AiOutlineInstagram, AiFillYoutube } from "react-icons/ai"; // ✅ Added YouTube, removed TfiTwitter
 
 export const FooterCard1 = ({ type, heading }) => {
   return (
@@ -39,14 +37,7 @@ export const FooterCard2 = () => {
             "2xl": "repeat(2,1fr)"
           }}
         >
-          {/* <Image
-            src="https://static.lenskart.com/media/desktop/img/play-store.svg"
-            alt="img"
-          />
-          <Image
-            src="https://static.lenskart.com/media/desktop/img/app-store.svg"
-            alt="img"
-          /> */}
+          {/* <Image src="..." /> */}
         </Grid>
       </Center>
       <br />
@@ -98,12 +89,18 @@ export const FooterCard = () => {
         textAlign="left"
       >
         <Text fontSize="16px" fontWeight="500">
-          FOLLOWS US AT
+          FOLLOW US AT
         </Text>
         <Flex gap="2">
-          <AiFillFacebook size="30px" />
-          <AiOutlineInstagram size="30px" />
-          <TfiTwitter size="30px" />
+          <a href="facebook.com/profile.php?id=61570011819545" target="_blank" rel="noopener noreferrer">
+            <AiFillFacebook size="30px" />
+          </a>
+          <a href="https://www.instagram.com/opti.clair/" target="_blank" rel="noopener noreferrer">
+            <AiOutlineInstagram size="30px" />
+          </a>
+          <a href="https://www.youtube.com/@OptiClair" target="_blank" rel="noopener noreferrer">
+            <AiFillYoutube size="30px" /> {/* ✅ replaced Twitter with YouTube */}
+          </a>
         </Flex>
       </Grid>
     </Grid>
