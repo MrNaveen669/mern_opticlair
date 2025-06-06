@@ -365,6 +365,9 @@
 // export default OrderManagement;
 import React, { useState, useEffect } from 'react';
 import './OrderManagement.css';
+import { ORDER_MANAGEMENT_URL, ORDER_STATUS_UPDATE_URL } from '../config/api';
+
+const BASE_URL = process.env.REACT_APP_BACKEND_URL ;
 
 const OrderManagement = () => {
   const [orders, setOrders] = useState([]);
@@ -376,8 +379,6 @@ const OrderManagement = () => {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [updatingStatus, setUpdatingStatus] = useState(false);
-
-  const BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
   // Helper function to extract token from local storage
   const getAdminToken = () => {
@@ -397,10 +398,10 @@ const OrderManagement = () => {
         return;
       }
 
-      console.log('Fetching orders from:', `${BASE_URL}/admin/orders`);
+      console.log('Fetching orders from:', ORDER_MANAGEMENT_URL);
       console.log('With token:', token ? `${token.substring(0, 20)}...` : 'null');
       
-      const response = await fetch(`${BASE_URL}/admin/orders?${new URLSearchParams({
+      const response = await fetch(`${ORDER_MANAGEMENT_URL}?${new URLSearchParams({
         page,
         limit: 20,
         ...(status !== 'all' && { status }),
@@ -455,9 +456,10 @@ const OrderManagement = () => {
         return;
       }
 
-      console.log('Updating order status:', `${BASE_URL}/admin/orders/${orderId}/status`);
+      const updateUrl = ORDER_STATUS_UPDATE_URL(orderId);
+      console.log('Updating order status:', updateUrl);
 
-      const response = await fetch(`${BASE_URL}/admin/orders/${orderId}/status`, {
+      const response = await fetch(updateUrl, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -535,7 +537,6 @@ const OrderManagement = () => {
   };
 
   const stats = getOrderStats();
-
   return (
     <div className="dashboard-container">
       {/* Header */}
