@@ -11,7 +11,7 @@
 ## 🚀 Live Demo
 
 🌐 **Frontend**: [https://opticlair.in](https://opticlair.in)  
-🛠️ **Admin Panel**: [https://Admin_Opticlair.in](https://opticlair-admin.onrender.com)
+🛠️ **Admin Panel**: [https://Admin.opticlair.in](https://admin.opticlair.in)
 
 ![Opticlair Preview](https://your-image-or-gif-link.com/demo.gif)
 
